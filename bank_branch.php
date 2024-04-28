@@ -30,12 +30,12 @@ body{
 <?php include 'header.php'; ?> 
 <div class="bank_branch_container">
 <div class="bank_branch_container_inner">
-<img src="img\Branch\West_Bengal1.jpg">
-<img src="img\Branch\Delhi1.jpg">
-<img src="img\Branch\Gujrat1.jpg">
-<img src="img\Branch\Derjeeling1.jpg">
-<img src="img\Branch\Madhyapradesh1.jpg">
-<img src="img\Branch\Jharkhand1.jpg">
+<img src="img\Branch\Kathmandu.jpg">
+<img src="img\Branch\Janakpur.jpg">
+<img src="img\Branch\Surkhet.jpg">
+<img src="img\Branch\Dhading.jpg">
+<img src="img\Branch\Sindhupalchok.jpg">
+<img src="img\Branch\Hetauda.jpg">
 </div>
 </div>
 <?php include 'footer.php'; ?> 
