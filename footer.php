@@ -22,9 +22,9 @@
         <div class="links">
             <label>Important Links</label>
             <ul>    
-            <li><a href="index.php#aboutus" target="_blank">About Us</a></li>
-            <li><a href="">Loan</a></li>
-            <li><a href="">Calculator</a></li> 
+            <li><a href="privacy.php">Privacy Policy</a></li>
+            <li><a href="Carrier.php">Carrier</a></li>
+             
             </ul><br>
     </div>
 
@@ -40,12 +40,8 @@
     
     </div>
     <div class="copyright">
-        <span>Copyright &copy; 2018-21 Online Banking System. All rights reserved.</span>
+        <span>Copyright &copy; 2023 SASBank. All rights reserved.</span>
     </div>
     
-    <div class="bestview">
-    <span>Site best viewed at 1024 x 768 resolution in Internet Explorer 10+, Google Chrome 49+, Firefox 45+ and Safari 6+</span>
-    
-    </div>
 
 </footer>
