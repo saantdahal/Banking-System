@@ -243,16 +243,13 @@ Unlock the door to your dreams with SASBank's instant loans – whether you're l
         <a class="footer__link" href="contact.php">Contact Us</a>
       </li>
       <li class="footer__item">
-        <a class="footer__link" href="news.php">News</a>
-      </li>
-      <li class="footer__item">
         <a class="footer__link" href="Privacy.php">Privacy Policy</a>
       </li>
       <li class="footer__item">
         <a class="footer__link" href="Carrier.php">Careers</a>
       </li>  
       <li class="footer__item">
-        <a class="footer__link" href="staff_login.php">Admin Login</a>
+        <a class="footer__link" href="staff_login.php">Staff Login</a>
       </li>   
     </ul>
     <img src="img/chase_title.jpg" alt="Logo" class="footer__logo" />

@@ -3,7 +3,7 @@
 <title>Add Staff</title>
 <body>
 <?php include 'header.php' ;
-        include 'admin_profile_header.php' ;
+        
 ?>
 
 <div class="add_staff_container">
