@@ -1,5 +1,3 @@
-**Log on to codeastro.com for more projects!***
-
 **Database Name: bnkms**
 
 **Developed by Santosh Dahal**
