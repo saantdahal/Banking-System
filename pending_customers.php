@@ -38,8 +38,8 @@ if(isset($_POST['approve_cust'])) {
 
 <div class="application_search">
     <form method="post">
-        <input type="text" name="application_no" placeholder="Application number" required>
-        <input type="submit" name="search_application" value="Search">
+        <input type="text" name="application_no" placeholder="Enter Application number" required>
+        <input type="submit" name="search_application" value="Approve">
     </form>
 </div>
 
