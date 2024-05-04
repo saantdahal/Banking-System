@@ -1,13 +1,15 @@
 <?php 
-session_start();
+if(session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
 if($_SESSION['staff_login'] != true)
 {
-	
-	 header('location:staff_login.php');
-
-}	
-
+    header('location:staff_login.php');
+    exit; // Add exit to stop execution after redirecting
+}   
 ?>
+
 
 <html>
     <head>

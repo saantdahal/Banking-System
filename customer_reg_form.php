@@ -20,10 +20,10 @@
 					  <option value="Others">Others</option>
 				</select>
 				 <input type="text" name="mobile" placeholder="Mobile no" required />
-				 <input type="text" name="email" placeholder="Email id" />
+				 <input type="text" name="email" placeholder="Email id" required/>
 				 <input type="text" name="landline" placeholder="Landline no" />
 				 <input type="text" name="dob" placeholder="Date of Birth" onfocus="(this.type='date')" required />
-				 <input type="text" name="pan_no" placeholder="PAN Number" required />
+				 <input type="text" name="pan_no" placeholder="PAN Number"  />
 				 <input type="text" name="citizenship" placeholder="Citizenship Number" required />
 				 <input class="address" type="text" name="homeaddrs" placeholder="Home Address" required  />
 				 <input class="address" type="text" name="officeaddrs" placeholder="Office Address" />
