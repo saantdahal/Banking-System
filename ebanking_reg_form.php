@@ -11,13 +11,9 @@
         <div class="ebanking_reg_form_container_child">
         <form method="post">
             <input type="text" name="holder_name" placeholder="Account Holder Name" required/>
-            <input type="text" name="accnum" placeholder="Account Number" required />
-            <input type="text" name="dbtcard" placeholder="Debit Card Number" required />
-            <input type="text" name="dbtpin" placeholder="Debit Card Pin" required/>   
+            <input type="text" name="accnum" placeholder="Account Number" required />  
             <input type="text" name="mobile" placeholder="Registered Mobile (10 Digit)" required />
-            <input type="text" name="pan_no" placeholder="PAN Number" required />
             <input type="text" name="dob" placeholder="Date of Birth" onfocus="(this.type='date')" required />
-            <input type="text" name="last_trans" placeholder="Last Transaction ($)"required />
             <input type="password" name="password" placeholder="Password" minlength=7 required/>
             <input type="password" name="cnfrm_password" placeholder="Confirm Password" required/>
             <input type="submit" name="submit" value="Submit"/>
@@ -30,9 +26,7 @@
 if(isset($_POST['submit'])){
 
     if(empty($_POST['holder_name']) || empty($_POST['accnum']) ||
-    empty($_POST['dbtcard']) || empty($_POST['dbtcard']) ||
-    empty($_POST['dbtpin']) || 
-    empty($_POST['mobile']) || empty($_POST['pan_no']) ||
+    empty($_POST['mobile']) ||
     empty($_POST['dob']) || empty($_POST['password']) ||
     empty($_POST['cnfrm_password'])){
 
@@ -45,12 +39,9 @@ if(isset($_POST['submit'])){
     
     $holder_name = $_POST['holder_name'];
     $account_no=$_POST['accnum']; 
-	$debitcard_no=$_POST['dbtcard'];
-	$debitcrd_pin=$_POST['dbtpin'];
 	$mobileno=$_POST['mobile'];
-	$pan=$_POST['pan_no'];
 	$dob= $_POST['dob'];
-    $last_trans=$_POST['last_trans'];
+ 
 
     //Without Hashing
     $password=$_POST['password'];
@@ -67,17 +58,17 @@ if(isset($_POST['submit'])){
 
         if($result1->num_rows > 0){
         
-       //Get Last transaction (Dr) amount
-        $sql2 = "SELECT  Cr_amount FROM passbook_$custmr_id WHERE Id=(SELECT max(Id) FROM passbook_$custmr_id) ";
-        $result2 = $conn->query($sql2);
-        $row2 = $result2->fetch_assoc();
-        echo $last_trans_cr = $row2['Cr_amount'];
+    //    //Get Last transaction (Dr) amount
+    //     $sql2 = "SELECT  Cr_amount FROM passbook_$custmr_id WHERE Id=(SELECT max(Id) FROM passbook_$custmr_id) ";
+    //     $result2 = $conn->query($sql2);
+    //     $row2 = $result2->fetch_assoc();
+    //     echo $last_trans_cr = $row2['Cr_amount'];
 
-        //Get Last transaction (Cr) amount
-        $sql3 = "SELECT  Dr_amount FROM passbook_$custmr_id WHERE Id=(SELECT max(Id) FROM passbook_$custmr_id)  ";
-        $result3 = $conn->query($sql3);
-        $row3 = $result1->fetch_assoc();
-        echo $last_trans_dr = $row3['Dr_amount'];
+    //     //Get Last transaction (Cr) amount
+    //     $sql3 = "SELECT  Dr_amount FROM passbook_$custmr_id WHERE Id=(SELECT max(Id) FROM passbook_$custmr_id)  ";
+    //     $result3 = $conn->query($sql3);
+    //     $row3 = $result1->fetch_assoc();
+    //     echo $last_trans_dr = $row3['Dr_amount'];
 
         
 
@@ -86,26 +77,26 @@ if(isset($_POST['submit'])){
             echo '<script>alert("Incorrect Account Holder Name")</script>';
         }
 
-        elseif($row1['Debit_Card_No'] != $debitcard_no){
+        // elseif($row1['Debit_Card_No'] != $debitcard_no){
             
-            echo '<script>alert("Incorrect Debit Card Number")</script>';
+        //     echo '<script>alert("Incorrect Debit Card Number")</script>';
  
-        }
+        // }
 
-        elseif($row1['Debit_Card_Pin'] != $debitcrd_pin){
+        // elseif($row1['Debit_Card_Pin'] != $debitcrd_pin){
 
-            echo '<script>alert("Incorrect Pin")</script>';
-         }
+        //     echo '<script>alert("Incorrect Pin")</script>';
+        //  }
 
          elseif($row1['Mobile_no'] != $mobileno){
 
             echo '<script>alert("Incorrect PAN number")</script>';
         }
 
-        elseif($row1['PAN'] != $pan ){
+        // elseif($row1['PAN'] != $pan ){
 
-            echo '<script>alert("Incorrect Mobile Number")</script>';
-        }
+        //     echo '<script>alert("Incorrect Mobile Number")</script>';
+        // }
 
         elseif($row1['DOB'] != $dob){
 
@@ -113,11 +104,11 @@ if(isset($_POST['submit'])){
 
         }
 
-        elseif($row2['Cr_amount'] != $last_trans && $row3['Dr_amount'] != $last_trans ){
+        // elseif($row2['Cr_amount'] != $last_trans && $row3['Dr_amount'] != $last_trans ){
 
-            echo '<script>alert("Incorrect Last Transaction Details")</script>';
+        //     echo '<script>alert("Incorrect Last Transaction Details")</script>';
 
-        }
+        // }
 
         elseif( $password != $cnfrm_password){
 
