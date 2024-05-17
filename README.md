@@ -22,7 +22,7 @@ The system is then designed in accordance specifications to satisfy the requirem
 
 SOFTWARE REQUIREMENTS:
 
-• Operating system : Windows XP/7/10.
+• Operating system : Windows/Linux.
 
 • Front End : PHP
 
