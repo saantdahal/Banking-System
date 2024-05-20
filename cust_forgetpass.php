@@ -7,7 +7,7 @@
 <body>
 <?php include 'header.php'; ?>
 <div class="forgetpass_cotainer">
-<p>Forget Password</p>
+<p>Forgot Password</p>
 <form method="post">
 <input type="text" name="cust_id" placeholder="Customer ID" required /><br>
 <input type="text" name="dbt_crd" placeholder="Debit Card Number" required /><br>

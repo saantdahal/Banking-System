@@ -19,11 +19,11 @@
         </div>
             
             
-            <div class="dif_banking">
+            <!-- <div class="dif_banking">
 			<div class="international_banking">
 				<a href="ebanking_reg_form.php"> Apply Mobile Banking</a>
 			</div>
-		</div>
+		</div> -->
             
            
 			

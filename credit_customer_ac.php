@@ -29,7 +29,7 @@
     </script>
 </head>
 <body>
-    <?php include 'header.php'; ?>
+    <!-- <?php include 'header.php'; ?> -->
     <?php include 'staff_profile_header.php'; ?>
     <div class="cust_credit_container">
         <form method="post">
@@ -92,7 +92,7 @@
                     $transaction_id = mt_rand(100, 999) . mt_rand(1000, 9999) . mt_rand(10, 99);
 
                     // Transaction Date
-                    date_default_timezone_set('Asia/Kolkata');
+                    date_default_timezone_set('Asia/Kathmandu');
                     $transaction_date = date("d/m/y h:i:s A");
 
                     // Customer's Transaction Description

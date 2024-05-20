@@ -37,7 +37,7 @@ if(isset($_SESSION['customer_login'])){
         <label class="userdetail">Password</label><br>
         <input class="password" type="password" name="password" required/><br>
         <input class="login-btn" type="submit" name="login-btn" value="LOGIN"/><br>
-        <a href="cust_forgetpass.php" class="help"><label class="label_help" >FORGET PASSWORD ?</label></a>
+        <a href="cust_forgetpass.php" class="help"><label class="label_help" >FORGOT PASSWORD ?</label></a>
             <img class="userloginimg" src="img/home-logo-hi.png" height="90px" width="90px">
         </div>
                 </div>
