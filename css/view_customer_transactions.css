@@ -1,0 +1,57 @@
+.view_cust_trans_container_outer {
+    text-align: center;
+    margin: 20px;
+}
+
+.view_cust_trans_container_inner {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.trans_details {
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #f9f9f9;
+    text-align: left;
+}
+
+.trans_details .heading {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.account_details {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.account_details p {
+    margin: 5px 0;
+}
+
+.trans_details table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.trans_details table, th, td {
+    border: 1px solid #ccc;
+}
+
+.trans_details th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+.trans_details th {
+    background-color: #f2f2f2;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
