@@ -34,7 +34,7 @@ Install XAMPP: Download and install XAMPP from Apache Friends.
 Clone the Repository:
 bash
 Copy code
-git clone https://github.com/yourusername/Basic-Banking-System.git
+git clone https://github.com/saantdahal/Banking-System.git
 Start XAMPP: Launch XAMPP and start the Apache and MySQL services.
 Import Database:
 Open phpMyAdmin from the XAMPP control panel.
@@ -45,7 +45,7 @@ Open config.php in the project folder.
 Update the database credentials to match your local setup.
 Run the Application:
 Place the project folder in the htdocs directory of XAMPP.
-Open a web browser and navigate to http://localhost/Basic-Banking-System.
+Open a web browser and navigate to http://localhost/Banking-System.
 
 Contribution 🤝
 We welcome contributions to enhance the project. Feel free to submit pull requests or open issues to report bugs or suggest new features.
