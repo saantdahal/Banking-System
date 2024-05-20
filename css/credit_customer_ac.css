@@ -28,53 +28,35 @@
   background-color: #002f3f;
 }
 
-.deposit_slip {
-  padding: 20px;
-  margin: 20px;
-  border: 1px solid #000;
-  width: 50%;
-  margin: 20px auto;
-  text-align: left;
-}
-
-.deposit_slip h2, .deposit_slip h3 {
-  text-align: center;
-}
-
-button {
-  display: block;
-  margin: 20px auto;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-}
-/* CSS for displaying customer details */
-.customer_details_container {
+.deposit-slip {
   padding: 2%;
-  background-color: #f2f2f2;
-  width: 50%;
+  background-color: #e2f0d9;
+  width: 40%;
   margin: 3% auto;
-  text-align: left;
-  color: #333;
+  text-align: center;
+  color: #004d00;
+  border: 1px solid #004d00;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 }
 
-.customer_details_container h2 {
-  color: #004156;
+.deposit-slip h2 {
+  margin-top: 0;
 }
 
-.customer_details_container p {
+.deposit-slip p {
   margin: 5px 0;
 }
 
-/* CSS for printable file generation message */
-.printable_file_message {
-  padding: 2%;
-  background-color: #f2f2f2;
-  width: 50%;
-  margin: 3% auto;
-  text-align: center;
-  color: #004156;
-  border: 2px solid #004156;
-  border-radius: 5px;
+.print-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #004156;
+  color: white;
+  border: none;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.print-button:hover {
+  background-color: #002f3f;
 }
