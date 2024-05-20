@@ -11,7 +11,6 @@
 <form method="post">
 <input type="text" name="cust_id" placeholder="Customer ID" required /><br>
 <input type="text" name="dbt_crd" placeholder="Debit Card Number" required /><br>
-<input type="text" name="dbt_crdpin" placeholder="Debit Card Pin"required /><br>
 <input type="text" name="mobile_no" placeholder="Registerd Mobile no" required /><br>
 <input type="submit" name="sendotp" value="Submit"><br>
 </form><br>

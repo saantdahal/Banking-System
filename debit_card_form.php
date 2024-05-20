@@ -23,7 +23,6 @@
 if(isset($_POST['dbt_crd_submit'])){
     $holder_name = $_POST['holder_name'];
     $dob = $_POST['dob'];
-    $pan = $_POST['pan'];
     $mob = $_POST['mob'];
     $acc_no = $_POST['acc_no'];
     if(empty($_POST['holder_name']) || empty($_POST['dob']) ||empty($_POST['mob']) ||empty($_POST['acc_no'])){
@@ -63,11 +62,6 @@ if(isset($_POST['dbt_crd_submit'])){
 
             echo '<script>alert("Incorrect Date of Birth\nPlease enter Date of Birth as on PAN Card")</script>';
     
-        }
-        elseif($pan != $row['PAN']){
-
-            echo '<script>alert("Incorrect PAN Number")</script>';
-
         }
      
 
