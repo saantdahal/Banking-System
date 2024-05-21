@@ -1,6 +1,7 @@
 <html>
 <head></head>
 <title>Add Staff</title>
+<link rel="stylesheet" type="text/css" href="css/add_staff.css" />
 <body>
 <?php include 'header.php' ;
         

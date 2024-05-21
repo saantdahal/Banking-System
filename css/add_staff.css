@@ -1,0 +1,72 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+  }
+  
+  .add_staff_container {
+    width: 100%;
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .add_staff_container form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .add_staff_container input,
+  .add_staff_container select {
+    width: calc(100% - 40px);
+    padding: 10px;
+    margin: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .add_staff_container input[type="submit"] {
+    background-color: #426bd7;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .add_staff_container input[type="submit"]:hover {
+    background-color: #314b9b;
+  }
+  
+  .add_staff_container input[type="text"]::placeholder,
+  .add_staff_container select::placeholder {
+    color: #aaa;
+  }
+  
+  .add_staff_container select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16"><path d="M7.247 11.14l-4.796-4.796a.5.5 0 0 1 .707-.708l4.292 4.292 4.292-4.292a.5.5 0 0 1 .707.708l-4.796 4.796a.5.5 0 0 1-.707 0z"/></svg>') no-repeat right 10px center;
+    background-size: 12px;
+  }
+  
+  .add_staff_container br {
+    display: none;
+  }
+  
+  @media (max-width: 600px) {
+    .add_staff_container {
+      padding: 15px;
+      margin: 20px;
+    }
+  
+    .add_staff_container input,
+    .add_staff_container select {
+      margin: 8px 0;
+    }
+  }
+  
