@@ -1,0 +1,104 @@
+/* emi.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+.header_main {
+    width: 100%;
+    background-color: #004156;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navBar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navBar li {
+    margin-right: 20px;
+}
+
+.navBar a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.logo-name {
+    display: flex;
+    align-items: center;
+}
+
+.logo_img {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.name h5 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.emi_calc_div {
+    background-color: #c5d9e2;
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 300px;
+    margin-top: 100px; /* Adjust for header */
+}
+
+.emi_calc_div h2 {
+    margin-bottom: 1em;
+    color: #004156;
+}
+
+.emi_calc_div input[type="text"] {
+    padding: 1em;
+    margin: 0.5em 0;
+    width: calc(100% - 2em);
+    border: 1px solid #004156;
+    border-radius: 5px;
+}
+
+.emi_calc_div input[type="submit"] {
+    background-color: #004156;
+    color: white;
+    padding: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: calc(100% - 2em);
+    margin-top: 1em;
+}
+
+.emi_calc_div input[type="submit"]:hover {
+    background-color: #002c39;
+}
+
+.result {
+    margin-top: 1em;
+}
+
+.result h3 {
+    color: #004156;
+}

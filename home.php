@@ -251,6 +251,9 @@ Unlock the door to your dreams with SASBank's instant loans – whether you're l
       <li class="footer__item">
         <a class="footer__link" href="staff_login.php">Staff Login</a>
       </li>   
+      <li class="footer__item">
+        <a class="footer__link" href="emi_calculator.php">EMI Calculator</a>
+      </li> 
     </ul>
     <img src="img/chase_title.jpg" alt="Logo" class="footer__logo" />
     <p class="footer__copyright">

@@ -12,7 +12,6 @@
         <?php include 'staff_profile_header.php' ?>	
 		
 <?php 
-/*
 if($_SESSION['customer_login'] == true)
 {
 	
@@ -25,7 +24,6 @@ if($_SESSION['customer_login'] == true)
     header('location:customer_login.php');
 
     }
-    */
 
 ?>
 		

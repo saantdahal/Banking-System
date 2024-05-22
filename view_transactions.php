@@ -48,7 +48,7 @@
 
     <div class="view_cust_trans_container_inner">
         <div class="trans_details" id="printableArea">
-            <span class="heading">Customer Transactions - SASBANK</span><br>
+            <span class="heading">Statement - SASBANK</span><br>
             <div class="account_details">
                 <p>Account Holder: <?php echo $cust_row['Username']; ?></p>
                 <p>Account Number: <?php echo $cust_row['Account_no']; ?></p>

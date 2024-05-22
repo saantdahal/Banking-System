@@ -1,7 +1,7 @@
 body, html {
     height: 100%;
-    background: url("img/chase.jpg") no-repeat center center fixed;
-    background-size: contain;
+    background: url("https://th.bing.com/th/id/R.4f2606275007a13680c0a6f9422a2203?rik=cAYuKx9xRxsiWg&pid=ImgRaw&r=0") no-repeat center center fixed;
+    background-size: cover;
 }
 
 .flex-container-background

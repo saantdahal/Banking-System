@@ -29,7 +29,6 @@
     </script>
 </head>
 <body>
-    <!-- <?php include 'header.php'; ?> -->
     <?php include 'staff_profile_header.php'; ?>
     <div class="cust_credit_container">
         <form method="post">

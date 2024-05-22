@@ -77,13 +77,13 @@ include "header.php";
     <h2>Contacting Us</h2>
     <address>
         SASBank<br>
-        123 Banking Street, Cityville<br>
-        Country<br>
+        Kathmandu<br>
+        Nepal<br>
         Email: info@sasbank.com
     </address>
 
     <footer>
-        This document was last updated on January 25, 2024.
+        This document was last updated on May 25, 2024.
     </footer>
 
 </body>
