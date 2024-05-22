@@ -5,7 +5,7 @@
     <link rel="stylesheet" type="text/css" href="css/emi.css" />
 </head>
 <body>
-<?php include 'header.php'; ?>
+
 <div class="emi_calc_div">
     <form method="post">
         <h2>EMI Calculator</h2>
@@ -13,6 +13,8 @@
         <input type="text" name="rate" placeholder="Interest Rate (%)" required>
         <input type="text" name="tenure" placeholder="Loan Tenure (Years)" required>
         <input type="submit" name="submit" value="Calculate">
+        <button type="button" onclick="goHome()">Home</button>
+        <button type="reset">Clear</button>
     </form>
     <?php
     if (isset($_POST['submit'])) {
@@ -30,5 +32,11 @@
     }
     ?>
 </div>
+
+<script>
+function goHome() {
+    window.location.href = 'home.php';
+}
+</script>
 </body>
 </html>

@@ -80,7 +80,7 @@ body {
     border-radius: 5px;
 }
 
-.emi_calc_div input[type="submit"] {
+.emi_calc_div input[type="submit"], .emi_calc_div button {
     background-color: #004156;
     color: white;
     padding: 1em;
@@ -91,7 +91,7 @@ body {
     margin-top: 1em;
 }
 
-.emi_calc_div input[type="submit"]:hover {
+.emi_calc_div input[type="submit"]:hover, .emi_calc_div button:hover {
     background-color: #002c39;
 }
 
