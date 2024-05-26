@@ -1,5 +1,4 @@
 <?php ob_start(); ?>
-
 <html>
 <head>
     <title>View Customer Transactions</title>
@@ -17,7 +16,7 @@
 </head>
 <body>
     <?php include 'header.php'; ?>
-    <?php include 'staff_profile_header.php'; ?>
+    <?php include 'staff_profile_header.php';?>
 
     <div class="view_cust_trans_container_outer">
         <form method="POST">
