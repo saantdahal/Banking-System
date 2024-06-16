@@ -22,7 +22,6 @@ $customer_id = $_POST['customer_id'];
 		
 	}
 			
-			
 		else{
 			
       
