@@ -14,7 +14,7 @@
 			<input type="submit" name="view_cust_by_ac" value="View Customer by A/c No"/>
 			<input type="submit" name="edit_cust_details" value="Edit Customer Details"/>
 			<input type="submit" name="apprvac" value="Approve Pending Account"/>
-			<input type="submit" name="view_trans" value="View Transaction"/>
+			<input type="submit" name="view_trans" value="View Statement"/>
 			<input type="submit" name="del_cust" value="Delete Customer A/c"/>	
 			<input type="submit" name="credit_cust_ac" value="Credit Customer"/>	
 		</div>
