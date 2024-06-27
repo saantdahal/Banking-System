@@ -1,66 +1,90 @@
-::-webkit-input-placeholder {
-  font-size: 3vh;
-  /* //font-family:verdana; */
+body {
+  font-family: Arial, sans-serif;
 }
 
 .application_search {
   margin-top: 2%;
-  background-color: rgb(245, 245, 245);
+  background-color: #f5f5f5;
   padding: 2%;
   text-align: center;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
-.application_search input[type="text"] {
-  font-size: 2.5vh;
-  width: 30%;
-  padding: 1.5%;
-  border: 0px;
-  /* // border-bottom-left-radius: 10px; */
-  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.5);
-}
-
+.application_search input[type="text"],
 .application_search input[type="submit"] {
   font-size: 2.5vh;
-  border: 0px;
-  /* //border-top-right-radius: 10px; */
-  background-color: #005f7d;
-  color: white;
   padding: 1.5%;
-  width: 10%;
+  border: 0px;
   box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.5);
   transition: 0.5s linear;
 }
+
+.application_search input[type="text"] {
+  width: 30%;
+}
+
+.application_search input[type="submit"] {
+  width: 10%;
+  background-color: #005f7d;
+  color: white;
+}
+
 .application_search input[type="submit"]:hover {
   background-color: cadetblue;
   cursor: pointer;
 }
 
+.application_details {
+  width: 80%;
+  margin: 2% auto;
+  background-color: #fafafa;
+  padding: 2%;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.application_details h3 {
+  margin-bottom: 20px;
+}
+
+.application_details table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.application_details th,
+.application_details td {
+  text-align: left;
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+.application_details th {
+  background-color: #005f7d;
+  color: white;
+}
+
 .pending_customers_container {
   margin: 5% auto;
   overflow-x: auto;
-  overflow-y: auto;
   width: 80%;
   background-color: antiquewhite;
 }
 
 table {
   width: 100%;
-  height: 5%;
   font-size: 15px;
   border-collapse: collapse;
-  border: 1px rgb(221, 221, 221);
-  /* //padding: 20px; */
   text-align: center;
 }
+
 table th {
   color: white;
-  height: 50px;
   background-color: #005f7d;
+  height: 50px;
 }
 
 tr:nth-child(even) {
-  background-color: rgb(242, 242, 242);
+  background-color: #f2f2f2;
 }
 
 tr:nth-child(odd) {
@@ -68,19 +92,38 @@ tr:nth-child(odd) {
 }
 
 td {
-  padding-left: 40px;
-  padding-right: 40px;
+  padding: 10px;
 }
 
-.approve input[name="approve_cust"] {
-  color: white;
+.actions {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.actions input[type="submit"] {
   font-size: 18px;
-  padding: 10px;
-  background-color: rgb(44, 78, 134);
-  border-radius: 3px;
-  box-shadow: 0px 2px black;
-  border: 0px;
-  margin: 0px auto;
-  display: block;
-  margin-bottom: 2%;
+  padding: 10px 20px;
+  border: 0;
+  border-radius: 5px;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.actions input[name="approve_cust"] {
+  background-color: #28a745;
+  color: white;
+}
+
+.actions input[name="approve_cust"]:hover {
+  background-color: #218838;
+}
+
+.actions input[name="delete_application"] {
+  background-color: #dc3545;
+  color: white;
+}
+
+.actions input[name="delete_application"]:hover {
+  background-color: #c82333;
 }
