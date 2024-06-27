@@ -76,7 +76,7 @@ if(isset($_POST['cnfrm-submit'])){
 	$acctype=$_SESSION['cust_acctype'];
 
 	
-	date_default_timezone_set('Asia/Kolkata'); 
+	date_default_timezone_set('Asia/Kathmandu'); 
 	$application_dt = date("d/m/y h:i:s A");
 	
 	$sql="INSERT into pending_accounts (Application_no, 
@@ -146,7 +146,7 @@ if(isset($_POST['cnfrm-submit'])){
 //--------------------------------------------------------------------------------------		
 	
 	echo  '<script>alert("Application submitted successfully\n\nApplication number : '.$application_no.'\n\nPlease visit bank with application number for account approval\n\nHint: From staff login, approve application")
-			location="index.php"
+			location="home.php"
 			</script>';
 					
 																						

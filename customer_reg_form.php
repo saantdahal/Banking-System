@@ -1,3 +1,4 @@
+<?php include 'header.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,6 +6,31 @@
     <title>Registration Form</title>
     <link rel="stylesheet" type="text/css" href="css/customer_reg_form.css"/>
     <script>
+        const citiesByProvince = {
+            "Province No. 1": ["Bhojpur", "Dhankuta", "Ilam", "Jhapa", "Khotang", "Morang", "Okhaldhunga", "Panchthar", "Sankhuwasabha", "Solukhumbu", "Sunsari", "Taplejung", "Terhathum", "Udayapur"],
+            "Province No. 2": ["Bara", "Dhanusa", "Mahottari", "Parsa", "Rautahat", "Sarlahi", "Saptari", "Siraha"],
+            "Bagmati": ["Bhaktapur", "Chitwan", "Dhading", "Dolakha", "Kathmandu", "Kavrepalanchok", "Lalitpur", "Makwanpur", "Nuwakot", "Ramechhap", "Rasuwa", "Sindhuli", "Sindhupalchok"],
+            "Gandaki": ["Baglung", "Gorkha", "Kaski", "Lamjung", "Manang", "Mustang", "Myagdi", "Nawalpur", "Parbat", "Syangja", "Tanahun"],
+            "Lumbini": ["Arghakhanchi", "Gulmi", "Kapilvastu", "Nawalparasi East", "Nawalparasi West", "Palpa", "Parasi", "Rupandehi"],
+            "Karnali": ["Dolpa", "Humla", "Jajarkot", "Jumla", "Kalikot", "Mugu", "Salyan", "Surkhet"],
+            "Sudurpashchim": ["Achham", "Baitadi", "Bajhang", "Bajura", "Dadeldhura", "Darchula", "Doti", "Kailali", "Kanchanpur"]
+        };
+
+        function updateCities() {
+            const provinceSelect = document.querySelector("select[name='state']");
+            const citySelect = document.querySelector("select[name='city']");
+            const selectedProvince = provinceSelect.value;
+            const cities = citiesByProvince[selectedProvince] || [];
+
+            citySelect.innerHTML = '<option class="default" value="" disabled selected>Select District</option>';
+            cities.forEach(city => {
+                const option = document.createElement("option");
+                option.value = city;
+                option.textContent = city;
+                citySelect.appendChild(option);
+            });
+        }
+
         function validateForm() {
             let form = document.forms["registrationForm"];
             let name = form["name"].value;
@@ -54,7 +80,7 @@
     <?php 
     if (isset($_POST['submit'])) {
         session_start();
-
+        
         // Server-side validation
         $errors = [];
         
@@ -130,95 +156,19 @@
                 <input class="address" type="text" name="officeaddrs" placeholder="Office Address" />
                 <input type="text" name="country" placeholder="NEP" value="NEP" readonly="readonly" />
 
-                <select name="state" required>
+                <select name="state" onchange="updateCities()" required>
                     <option class="default" value="" disabled selected>State</option>
-                    <option value="Karnali">Karnali</option>
-                    <option value="Sudurpachhim">Sudurpachhim</option>
-                    <option value="Gandaki">Gandaki</option>
-                    <option value="Lumbini">Lumbini</option>
                     <option value="Province No. 1">Province No. 1</option>
                     <option value="Province No. 2">Province No. 2</option>
                     <option value="Bagmati">Bagmati</option>
+                    <option value="Gandaki">Gandaki</option>
+                    <option value="Lumbini">Lumbini</option>
+                    <option value="Karnali">Karnali</option>
+                    <option value="Sudurpashchim">Sudurpashchim</option>
                 </select>
 
                 <select name="city" required>
                     <option class="default" value="" disabled selected>Select District</option>
-                    <option value="Achham">Achham</option>
-                    <option value="Arghakhanchi">Arghakhanchi</option>
-                    <option value="Baglung">Baglung</option>
-                    <option value="Baitadi">Baitadi</option>
-                    <option value="Bajhang">Bajhang</option>
-                    <option value="Bajura">Bajura</option>
-                    <option value="Banke">Banke</option>
-                    <option value="Bara">Bara</option>
-                    <option value="Bardiya">Bardiya</option>
-                    <option value="Bhaktapur">Bhaktapur</option>
-                    <option value="Bhojpur">Bhojpur</option>
-                    <option value="Chitwan">Chitwan</option>
-                    <option value="Dadeldhura">Dadeldhura</option>
-                    <option value="Dailekh">Dailekh</option>
-                    <option value="Dang">Dang</option>
-                    <option value="Darchula">Darchula</option>
-                    <option value="Dhading">Dhading</option>
-                    <option value="Dhankuta">Dhankuta</option>
-                    <option value="Dhanusha">Dhanusha</option>
-                    <option value="Dolakha">Dolakha</option>
-                    <option value="Dolpa">Dolpa</option>
-                    <option value="Doti">Doti</option>
-                    <option value="Gorkha">Gorkha</option>
-                    <option value="Gulmi">Gulmi</option>
-                    <option value="Humla">Humla</option>
-                    <option value="Ilam">Ilam</option>
-                    <option value="Jajarkot">Jajarkot</option>
-                    <option value="Jhapa">Jhapa</option>
-                    <option value="Jumla">Jumla</option>
-                    <option value="Kailali">Kailali</option>
-                    <option value="Kalikot">Kalikot</option>
-                    <option value="Kanchanpur">Kanchanpur</option>
-                    <option value="Kapilvastu">Kapilvastu</option>
-                    <option value="Kaski">Kaski</option>
-                    <option value="Kathmandu">Kathmandu</option>
-                    <option value="Kavrepalanchok">Kavrepalanchok</option>
-                    <option value="Khotang">Khotang</option>
-                    <option value="Lalitpur">Lalitpur</option>
-                    <option value="Lamjung">Lamjung</option>
-                    <option value="Mahottari">Mahottari</option>
-                    <option value="Makwanpur">Makwanpur</option>
-                    <option value="Manang">Manang</option>
-                    <option value="Morang">Morang</option>
-                    <option value="Mugu">Mugu</option>
-                    <option value="Mustang">Mustang</option>
-                    <option value="Myagdi">Myagdi</option>
-                    <option value="Nawalpur">Nawalpur</option>
-                    <option value="Nuwakot">Nuwakot</option>
-                    <option value="Okhaldhunga">Okhaldhunga</option>
-                    <option value="Palpa">Palpa</option>
-                    <option value="Panchthar">Panchthar</option>
-                    <option value="Parasi">Parasi</option>
-                    <option value="Parbat">Parbat</option>
-                    <option value="Parsa">Parsa</option>
-                    <option value="Pyuthan">Pyuthan</option>
-                    <option value="Ramechhap">Ramechhap</option>
-                    <option value="Rasuwa">Rasuwa</option>
-                    <option value="Rautahat">Rautahat</option>
-                    <option value="Rolpa">Rolpa</option>
-                    <option value="Rukum">Rukum</option>
-                    <option value="Rupandehi">Rupandehi</option>
-                    <option value="Salyan">Salyan</option>
-                    <option value="Sankhuwasabha">Sankhuwasabha</option>
-                    <option value="Saptari">Saptari</option>
-                    <option value="Sarlahi">Sarlahi</option>
-                    <option value="Sindhuli">Sindhuli</option>
-                    <option value="Sindhupalchok">Sindhupalchok</option>
-                    <option value="Siraha">Siraha</option>
-                    <option value="Solukhumbu">Solukhumbu</option>
-                    <option value="Sunsari">Sunsari</option>
-                    <option value="Surkhet">Surkhet</option>
-                    <option value="Syangja">Syangja</option>
-                    <option value="Tanahun">Tanahun</option>
-                    <option value="Taplejung">Taplejung</option>
-                    <option value="Terhathum">Terhathum</option>
-                    <option value="Udayapur">Udayapur</option>
                 </select>
 
                 <input type="text" name="pin" placeholder="Pin Code" required />
