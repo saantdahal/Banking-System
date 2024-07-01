@@ -1,9 +1,70 @@
+<?php
+session_start();
+include 'header.php';
+
+if (isset($_POST['submit'])) {
+    // Server-side validation
+    $errors = [];
+
+    if (empty($_POST['name'])) $errors[] = 'Name is required';
+    if (empty($_POST['gender'])) $errors[] = 'Gender is required';
+    if (empty($_POST['mobile']) || !preg_match('/^[0-9]{10}$/', $_POST['mobile'])) $errors[] = 'Valid mobile number is required';
+    if (empty($_POST['email']) || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) $errors[] = 'Valid email is required';
+    if (empty($_POST['dob'])) {
+        $errors[] = 'Date of Birth is required';
+    } else {
+        $dobDate = new DateTime($_POST['dob']);
+        $today = new DateTime();
+        if ($dobDate > $today) {
+            $errors[] = 'Date of birth cannot be a future date';
+        }
+    }
+    if (empty($_POST['citizenship'])) $errors[] = 'Citizenship number is required';
+    if (empty($_POST['homeaddrs'])) $errors[] = 'Home address is required';
+    if (empty($_POST['state'])) $errors[] = 'State is required';
+    if (empty($_POST['city'])) $errors[] = 'City is required';
+    if (empty($_POST['pin'])) $errors[] = 'Pin Code is required';
+    if (empty($_POST['arealoc'])) $errors[] = 'Area/Locality is required';
+    if (empty($_POST['acctype'])) $errors[] = 'Account Type is required';
+
+    if (!empty($errors)) {
+        foreach ($errors as $error) {
+            echo "<p style='color:red;'>$error</p>";
+        }
+    } else {
+        $_SESSION['$cust_acopening'] = TRUE;
+        $_SESSION['cust_name'] = $_POST['name'];
+        $_SESSION['cust_gender'] = $_POST['gender'];
+        $_SESSION['cust_mobile'] = $_POST['mobile'];
+        $_SESSION['cust_email'] = $_POST['email'];
+        $_SESSION['cust_landline'] = $_POST['landline'];
+        $_SESSION['cust_dob'] = $_POST['dob'];
+        $_SESSION['cust_pan='] = $_POST['pan_no'];
+        $_SESSION['cust_citizenship'] = $_POST['citizenship'];
+        $_SESSION['cust_homeaddrs'] = $_POST['homeaddrs'];
+        $_SESSION['cust_officeaddrs'] = $_POST['officeaddrs'];
+        $_SESSION['cust_country'] = $_POST['country'];
+        $_SESSION['cust_state'] = $_POST['state'];
+        $_SESSION['cust_city'] = $_POST['city'];
+        $_SESSION['cust_pin'] = $_POST['pin'];
+        $_SESSION['arealoc'] = $_POST['arealoc'];
+        $_SESSION['nominee_name'] = $_POST['nominee_name'];
+        $_SESSION['nominee_ac_no'] = $_POST['nominee_ac_no'];
+        $_SESSION['cust_acctype'] = $_POST['acctype'];
+    
+        header('Location: cust_regfrm_confirm.php');
+        exit(); // Ensure no further output is sent
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Registration Form</title>
     <link rel="stylesheet" type="text/css" href="css/customer_reg_form.css"/>
+   
     <script>
         const citiesByProvince = {
             "Province No. 1": ["Bhojpur", "Dhankuta", "Ilam", "Jhapa", "Khotang", "Morang", "Okhaldhunga", "Panchthar", "Sankhuwasabha", "Solukhumbu", "Sunsari", "Taplejung", "Terhathum", "Udayapur"],
@@ -75,64 +136,7 @@
     </script>
 </head>
 <body>
-
-    <?php 
-    if (isset($_POST['submit'])) {
-        session_start();
-        
-        // Server-side validation
-        $errors = [];
-        
-        if (empty($_POST['name'])) $errors[] = 'Name is required';
-        if (empty($_POST['gender'])) $errors[] = 'Gender is required';
-        if (empty($_POST['mobile']) || !preg_match('/^[0-9]{10}$/', $_POST['mobile'])) $errors[] = 'Valid mobile number is required';
-        if (empty($_POST['email']) || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) $errors[] = 'Valid email is required';
-        if (empty($_POST['dob'])) {
-            $errors[] = 'Date of Birth is required';
-        } else {
-            $dobDate = new DateTime($_POST['dob']);
-            $today = new DateTime();
-            if ($dobDate > $today) {
-                $errors[] = 'Date of birth cannot be a future date';
-            }
-        }
-        if (empty($_POST['citizenship'])) $errors[] = 'Citizenship number is required';
-        if (empty($_POST['homeaddrs'])) $errors[] = 'Home address is required';
-        if (empty($_POST['state'])) $errors[] = 'State is required';
-        if (empty($_POST['city'])) $errors[] = 'City is required';
-        if (empty($_POST['pin'])) $errors[] = 'Pin Code is required';
-        if (empty($_POST['arealoc'])) $errors[] = 'Area/Locality is required';
-        if (empty($_POST['acctype'])) $errors[] = 'Account Type is required';
-
-        if (!empty($errors)) {
-            foreach ($errors as $error) {
-                echo "<p style='color:red;'>$error</p>";
-            }
-        } else {
-            $_SESSION['$cust_acopening'] = TRUE;
-            $_SESSION['cust_name'] = $_POST['name'];
-            $_SESSION['cust_gender'] = $_POST['gender'];
-            $_SESSION['cust_mobile'] = $_POST['mobile'];
-            $_SESSION['cust_email'] = $_POST['email'];
-            $_SESSION['cust_landline'] = $_POST['landline'];
-            $_SESSION['cust_dob'] = $_POST['dob'];
-            $_SESSION['cust_pan='] = $_POST['pan_no'];
-            $_SESSION['cust_citizenship'] = $_POST['citizenship'];
-            $_SESSION['cust_homeaddrs'] = $_POST['homeaddrs'];
-            $_SESSION['cust_officeaddrs'] = $_POST['officeaddrs'];
-            $_SESSION['cust_country'] = $_POST['country'];
-            $_SESSION['cust_state'] = $_POST['state'];
-            $_SESSION['cust_city'] = $_POST['city'];
-            $_SESSION['cust_pin'] = $_POST['pin'];
-            $_SESSION['arealoc'] = $_POST['arealoc'];
-            $_SESSION['nominee_name'] = $_POST['nominee_name'];
-            $_SESSION['nominee_ac_no'] = $_POST['nominee_ac_no'];
-            $_SESSION['cust_acctype'] = $_POST['acctype'];
-        
-            header('Location: cust_regfrm_confirm.php');
-        }
-    }
-    ?>
+    
 
     <div class="container_regfrm_container_parent">
         <h3>Online Account Opening Form</h3>
