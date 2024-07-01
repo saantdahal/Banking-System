@@ -5,8 +5,6 @@ include "user_navbar.php";
 //include "admin_sidebar.php";
 
 include "session_timeout.php";
-
-
 <!DOCTYPE html>
 <html>
 
