@@ -3,10 +3,7 @@
 <title>Add Staff</title>
 <link rel="stylesheet" type="text/css" href="css/add_staff.css" />
 <body>
-<?php include 'header.php' ;
-        
-?>
-
+<?php include 'header.php' ; ?>
 <div class="add_staff_container">
 <br>
 <form method="post">
