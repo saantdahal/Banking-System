@@ -19,8 +19,6 @@ background-color: rgba(5, 21, 71,0.4);
 
 if($_SESSION['customer_login'] == true)
 {
-	
-	
 
 }	
 
