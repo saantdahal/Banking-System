@@ -19,8 +19,7 @@ if($result1->num_rows <= 0){
     echo '<script>alert("No Beneficiary found")
     location="fund_transfer.php"</script>';
 
-}
-  
+} 
 ?>
 <html>
 <body>
