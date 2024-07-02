@@ -96,5 +96,4 @@
     <?php include 'footer.php'; ?>
 </body>
 </html>
-
 <?php ob_end_flush(); ?>
