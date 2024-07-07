@@ -28,14 +28,14 @@
             </ul><br>
     </div>
 
-    <div class="links">
+    <!-- <div class="links">
             <label>Important Links</label>
             <ul>    
             <li><a href="index.php#aboutus" target="_blank">Link 1</a></li>
             <li><a href="">Link 2</a></li>
             <li><a href="">Link 3</a></li> 
             </ul><br>
-    </div>
+    </div> -->
     
     
     </div>
