@@ -33,7 +33,6 @@ if (!is_numeric($customer_id) || !is_numeric($debitcard) || !is_numeric($mob_no)
         echo '<script>alert("Customer not found!")</script>';
     }
 }
-
 function generateNewPassword() {
     // Define your password generation logic
     // For example, you can use rand() function to generate a random password
