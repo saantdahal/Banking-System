@@ -4,7 +4,7 @@
 
 ## 📋 Overview
 
-Basic Banking Prototype is a simple web-based application developed using HTML, CSS, JavaScript, and Bootstrap. This project simulates basic banking operations where users can create accounts, add beneficiaries, and make transactions to other accounts. An admin interface is provided to approve user accounts before they can be activated.
+Basic Banking Prototype is a simple web-based application developed using HTML, CSS, JavaScript, Bootstrap, and MySQL. This project simulates basic banking operations where users can create accounts, add beneficiaries, and make transactions to other accounts. An admin interface is provided to approve user accounts before they can be activated.
 
 ## ✨ Features
 
@@ -20,6 +20,7 @@ Basic Banking Prototype is a simple web-based application developed using HTML, 
 - **🎨 CSS3:** For styling the application.
 - **⚙️ JavaScript:** For client-side functionality.
 - **📱 Bootstrap:** For responsive design and pre-built UI components.
+- **🗄️ MySQL:** For managing and storing user, beneficiary, and transaction data.
 
 ## 🚀 Installation
 
@@ -31,7 +32,15 @@ Basic Banking Prototype is a simple web-based application developed using HTML, 
     ```bash
     cd Banking-System
     ```
-3. Open `home.html` in your preferred web browser to start the application.
+3. Import the provided MySQL database schema:
+    - Create a new database in MySQL.
+    - Import the SQL file using a tool like phpMyAdmin or the MySQL command line:
+      ```bash
+      mysql -u yourusername -p yourdatabase < database.sql
+      ```
+4. Update the database connection settings in the project files (if applicable).
+
+5. Open `home.html` in your preferred web browser to start the application.
 
 ## 🛠️ Usage
 
