@@ -11,7 +11,7 @@ include "header.php";
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background: url("img/chase.jpg") no-repeat center center fixed;
+            background: url("img/chase.png") no-repeat center center fixed;
             color: #333;
             margin: 20px;
             line-height: 1.6;

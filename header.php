@@ -10,7 +10,7 @@
 		</div>
 	 <a href="index.php"><div class="logo-name">
 			<div class="logo">
-             <img class="logo_img" src="img/chase.jpg">
+             <img class="logo_img" src="img/chase.png">
 			</div>
 			
 			<div class="name">
