@@ -14,7 +14,7 @@ if (isset($_GET['loginFailed'])) {
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <link rel="shortcut icon" type="image/jpg" href="img/chase_title.jpg" />
+  <link rel="shortcut icon" type="image/jpg" href="img/chase_title.png" />
 
   <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/home_style.css" />
@@ -26,7 +26,7 @@ if (isset($_GET['loginFailed'])) {
 <body>
   <header class="header">
     <nav class="nav">
-      <img src="img/chase_title.jpg" alt="Bankist logo" class="nav__logo" id="logo" designer="Jonas" data-version-number="3.0" />
+      <img src="img/chase_title.png" alt="Bankist logo" class="nav__logo" id="logo" designer="Jonas" data-version-number="3.0" />
       <ul class="nav__links">
         <li class="nav__item">
           <a class="nav__link" href="customer_reg_form.php">Create Account</a>
@@ -255,7 +255,7 @@ Unlock the door to your dreams with SASBank's instant loans – whether you're l
         <a class="footer__link" href="emi_calculator.php">EMI Calculator</a>
       </li> 
     </ul>
-    <img src="img/chase_title.jpg" alt="Logo" class="footer__logo" />
+    <img src="img/chase_title.png" alt="Logo" class="footer__logo" />
     <p class="footer__copyright">
       &copy; Copyright by
       <a>2023 SASBANK </a>
